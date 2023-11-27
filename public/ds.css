@@ -1,0 +1,28 @@
+.reciever:after {
+    content: "";
+    display: flex;
+    margin-top:-6px;
+    margin-left:-5px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #ebebeb;
+    transform:rotate(45deg);
+    float: left;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+
+  .sender:after {
+    content: "";
+    position:absolute;
+    margin-top:-6px;
+    margin-left:-5px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #6389fe;
+    transform:rotate(-45deg);
+    right: -15px; 
+    top: 10px;
+  }

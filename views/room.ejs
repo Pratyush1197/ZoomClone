@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+    </script>
+</head>
+
+<body onload="getData()" <div class="main">
+    <div class="main_left">
+        <div class="main_videos">
+            <div id="video-grid"></div>
+        </div>
+
+        <div class="main_controls">
+            <div class="main_controls_block">
+                <div class="main_controls_button main__video_button" onclick="videoPlayStop()">
+                    <i class="fa fa-video"></i>
+                    <span>Start Video</span>
+
+                </div>
+                <div class="main_controls_button main__mute_button" onclick="muteUnmute()">
+                    <i class="fa fa-microphone" aria-hidden="true"></i>
+                    <span>Mute</span>
+
+                </div>
+            </div>
+            <div class="main_controls_block">
+                <div class="main_controls_button">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Security</span>
+                </div>
+                <div class="main_controls_button">
+                    <i class="fas fa-user-friends"></i>
+                    <span>Participants</span>
+                </div>
+                <div class="main_controls_button" onclick="toggleChat()">
+                    <i class="fas fa-comment-alt"></i>
+                    <span>Chat</span>
+                </div>
+            </div>
+            <div class="main_controls_block">
+                <div class="main_controls_button">
+
+                    <span class="leave" onclick="closemeet()">Leave Meeting</span>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="main_right" ,id="main_right_id">
+
+        <h6 id="ChatHead">Chat </h6>
+        <div class="main_header"></div>
+        <div id="main_bodyId" class="main_body"></div>
+
+        <div class="main_footer">
+            <div class="chatContainer">
+
+                <input id="text" class="text-line" />
+                <i class="fa fa-paper-plane textbtn" aria-hidden="true" onclick="chats();"></i>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
